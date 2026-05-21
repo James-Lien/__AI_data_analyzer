@@ -537,7 +537,7 @@ export default function App() {
             <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-5 shadow-lg">
               <h3 className="text-xs font-semibold mb-3 text-slate-300 uppercase tracking-wider">SYSTEM INSTRUCTION 系統設定常數</h3>
               <div className="p-3 bg-black/40 rounded-xl text-[11px] font-mono leading-relaxed text-slate-400 border border-white/5">
-                我們已在後端注入專屬的資料分析指令集：規範 AI 必須做為資深商業決策專家，精準運用繁體中文語境，在 3秒內整合並輸出「數據總覽與摘要」、「趨勢與關鍵洞察」、「最少 3 條具體改善建議 (Actionable Recommendations)」，並以高規格 Markdown 結構進行美化。
+                我們已在後端注入專屬的資料分析指令集：規範 AI 做為專業資料分析師，嚴格以繁體中文與指定 Markdown 格式輸出「資料概況與欄位理解」、「異常與缺值檢查」以及「統計與趨勢洞察（包含總計概況、分類表現與 1-2 個具體業務建議）」。
               </div>
             </div>
 
