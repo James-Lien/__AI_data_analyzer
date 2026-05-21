@@ -8,7 +8,7 @@ dotenv.config();
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = parseInt(process.env.PORT || "3000");
 
   // JSON body parser with proper limit
   app.use(express.json({ limit: "15mb" }));
@@ -18,11 +18,6 @@ async function startServer() {
   const ai = apiKey
     ? new GoogleGenAI({
         apiKey: apiKey,
-        httpOptions: {
-          headers: {
-            "User-Agent": "aistudio-build",
-          },
-        },
       })
     : null;
 
@@ -63,7 +58,7 @@ async function startServer() {
 
       if (!ai) {
         return res.status(500).json({
-          error: "伺服器未檢測到 GEMINI_API_KEY。請確認已在 Settings > Secrets 點選設定金鑰。",
+          error: "伺服器未檢測到 GEMINI_API_KEY。請確認環境變數中已設定此金鑰。",
         });
       }
 
